@@ -1,2 +1,0 @@
-graft testapp/templates
-graft testapp/static

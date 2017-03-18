@@ -1,70 +1,34 @@
-# Docker ahoi! - Round 1
+# Docker ahoi! - Workshop
 
 ## Goals
 
-* Write your own Dockerfile
-* Learn basic Docker Commands
+* Round 1: Docker Basics
+* Round 2: Docker Compose
+* Round 3: Kubernetes
+
+## How to start?
+
+* This repo has three branches - one branch for each round.
+* Checkout branch `round 1` and follow the tasks in the `README.md` file.
+* If you have solved `round 1` raise your hand.
+* It is time for a recap. We will do a short summary presentation.
+* We will follow this iterative process until we finished all rounds.
+* Then it should be time for lunch! Yeah!
 
 ## Help
 
 * [Docs](https://docs.docker.com)
-* [Docs > Dockerfile](https://docs.docker.com/engine/reference/builder/)
-* [Docs > Commandline](https://docs.docker.com/engine/reference/commandline/cli)
+* If you have any questions just raise your hand and we get back to you.
 
-## Tasks - Round 1
+# Credentials
 
-### Write your first Dockerfile
+Enjoy the workshop & follow us on twitter [@dockerbay](https://twitter.com/dockerbay).
 
-Fill out `Dockerfile`
+## Docker Mentors
 
-### Build docker image
+* Benjamin [@dataduke](https://twitter.com/dataduke)
+* Bastian [@dastianoro](https://twitter.com/dastianoro)
 
-___
+## Hosted Locations
 
-### Run docker container
-
-___
-
-### List running docker containers
-
-___
-
-### Stop docker container
-
-___
-
-### List all docker containers
-
-___
-
-### Remove created container
-
-___
-
-### Run docker container with removal
-
-___
-
-### Run docker container in background
-
-___
-
-### Step into container
-
-___
-
-### Stop container
-
-___
-
-### Start container
-
-___
-
-### Run docker container and step into
-
-___
-
-### Run docker container with mounted volume
-
-___
+* [Spartakiade 2017](www.spartakiade.org)
