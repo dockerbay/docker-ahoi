@@ -1,2 +1,6 @@
 .idea/
 *.pyc
+build/
+dist/
+testapp.egg-info/
+testapp/testapp.egg-info/
