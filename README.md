@@ -19,52 +19,56 @@ Fill out `Dockerfile`
 
 ### Build docker image
 
-___
+`docker build -t flask-app-image:latest .`
 
 ### Run docker container
 
-___
+`docker run --expose=5000 --publish $DOCKER_IP:80:5000 --name=my-flask-app-container flask-app-image`
 
 ### List running docker containers
 
-___
+`docker ps`
 
 ### Stop docker container
 
-___
+`docker stop my-flask-app-container`
 
 ### List all docker containers
 
-___
+`docker ps -a`
 
 ### Remove created container
 
-___
+`docker rm my-flask-app-container`
 
 ### Run docker container with removal
 
-___
+`docker run --expose=5000 --publish $DOCKER_IP:80:5000 --name=my-flask-app-container --rm flask-app-image`
 
 ### Run docker container in background
 
-___
+`docker run --expose=5000 --publish $DOCKER_IP:80:5000 --name=my-flask-app-container --d flask-app-image`
 
 ### Step into container
 
-___
+`docker exec -it my-flask-app-container sh`
 
 ### Stop container
 
-___
+`docker stop my-flask-app-container`
 
 ### Start container
 
-___
+`docker start my-flask-app-container`
 
 ### Run docker container and step into
 
-___
+`docker run --expose=5000 --publish $DOCKER_IP:80:5000 --name=my-flask-app-container --rm -it flask-app-image sh`
 
-### Run docker container with mounted volume
+### Kill container with SIGTERM
 
-___
+`docker kill my-flask-app-container`
+
+### Remove our image
+
+`docker rmi flask-app-image`
