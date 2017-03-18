@@ -1,34 +1,47 @@
-# Docker ahoi! - Workshop
+# Docker ahoi! - Round 2
 
 ## Goals
 
-* Round 1: Docker Basics
-* Round 2: Docker Compose
-* Round 3: Kubernetes
-
-## How to start?
-
-* This repo has three branches - one branch for each round.
-* Checkout branch `round 1` and follow the tasks in the `README.md` file.
-* If you have solved `round 1` raise your hand.
-* It is time for a recap. We will do a short summary presentation.
-* We will follow this iterative process until we finished all rounds.
-* Then it should be time for lunch! Yeah!
+* Write your own Docker Compose file
+* Learn Multicontainer Commands
 
 ## Help
 
 * [Docs](https://docs.docker.com)
-* If you have any questions just raise your hand and we get back to you.
+* [Docs > Compose file](https://docs.docker.com/compose/compose-file/)
+* [Docs > Compose Commands](https://docs.docker.com/compose/reference/)
 
-# Credentials
+## Tasks - Round 2
 
-Enjoy the workshop & follow us on twitter [@dockerbay](https://twitter.com/dockerbay).
+# Step 1
 
-## Docker Mentors
+Start with docker compose command and try to fix the `docker-compose.yml` file:
 
-* Benjamin [@dataduke](https://twitter.com/dataduke)
-* Bastian [@dastianoro](https://twitter.com/dastianoro)
+`docker-compose up -d`
 
-## Hosted Locations
+# Step 2
 
-* [Spartakiade 2017](www.spartakiade.org)
+Figure out how to persistent the database.
+Find several solutions.
+
+## A bit more help
+
+__Example:__ Docker Compose file from Wordpress
+
+```
+version: '2'
+
+services:
+
+  wordpress:
+    image: wordpress
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_PASSWORD: example
+
+  mysql:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+```

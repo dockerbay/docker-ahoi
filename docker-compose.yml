@@ -1,0 +1,3 @@
+# Start app on port 5000
+# Build from current directory
+# Mount app data into container
