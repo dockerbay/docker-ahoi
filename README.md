@@ -23,7 +23,11 @@ Fill out `Dockerfile`
 
 ### Run docker container
 
-`docker run --expose=5000 --publish $DOCKER_IP:80:5000 --name=my-flask-app-container flask-app-image`
+`docker run --publish $DOCKER_IP:80:5000 --name=my-flask-app-container flask-app-image`
+
+...or publish all ports. *Caution: Not recommended for production.*
+
+`docker run -P --name=my-flask-app-container flask-app-image`
 
 ### List running docker containers
 
