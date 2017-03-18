@@ -51,7 +51,7 @@ Fill out `Dockerfile`
 
 ### Run docker container in background
 
-`docker run --expose=5000 --publish $DOCKER_IP:80:5000 --name=my-flask-app-container --d flask-app-image`
+`docker run --expose=5000 --publish $DOCKER_IP:80:5000 --name=my-flask-app-container -d flask-app-image`
 
 ### Step into container
 
