@@ -26,7 +26,10 @@ Find several solutions.
 
 ## A bit more help
 
-__Example:__ Docker Compose file from Wordpress
+__Example:__
+
+Here is a Docker Compose file for Wordpress and MariaDB.
+You need to implement a similar solution for our well-know flask app.
 
 ```
 version: '2'
