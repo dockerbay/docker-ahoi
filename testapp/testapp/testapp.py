@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 
 @app.route("/")
+@app.route("/start-page")
 def start_page():
     return render_template("start-page.html")
 

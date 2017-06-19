@@ -1,18 +1,18 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: flask-test-app-rc
+  name: flask-test-app-2
 spec:
   replicas: 2
   selector:
-    app: flask-test-app
+    app: flask-test-app-2
   template:
     metadata:
       labels:
-        app: flask-test-app
+        app: flask-test-app-2
     spec:
       containers:
-      - name: flask-test-app
+      - name: flask-test-app-2
         image: bastianklein/flask-test-app
         ports:
         - containerPort: 80
