@@ -12,3 +12,11 @@ def start_page():
 @app.route("/next-page")
 def next_page():
     return render_template("next-page.html")
+
+@app.route("/system/info")
+def liveness_probe():
+    return "I am living"
+
+@app.route("/system/health")
+def readiness_probe():
+    return "I am ready"
