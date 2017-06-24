@@ -23,3 +23,15 @@ spec:
         env:
         - name: FLASK_APP
           value: 'testapp'
+        readinessProbe:
+          httpGet:
+            path: /system/health
+            port: 80
+          initialDelaySeconds: 10
+          timeoutSeconds: 3
+        livenessProbe:
+          httpGet:
+            path: /system/info
+            port: 80
+          initialDelaySeconds: 180
+          timeoutSeconds: 3
