@@ -1,10 +1,16 @@
-# Our python flask app with docker-compose
-app:
-  # Build from current directory
-  build: .
-  # Start app on port 5000
-  ports:
-  - "5000:5000"
-  # Mount app data into container
-  volumes:
-  - ./testapp:/usr/local/opt/testapp
+version: '3'
+
+services:
+  # Our python flask app with docker-compose
+  app:
+    image: bastianklein/docker-compose-test-app
+    # Build from current directory
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Start app on port 5000
+    ports:
+    - "5000:5000"
+    # Mount app data into container
+    volumes:
+    - ./testapp:/usr/local/opt/testapp
