@@ -1,4 +1,4 @@
-#!/bin/sh -c
+#!/bin/sh
 
 sed -e "s|\${NGINX_PATH_APP_1}|${NGINX_PATH_APP_1}|g" \
     -e "s|\${FLASK_APP_1_URL}|${FLASK_APP_1_URL}|g" \
@@ -19,4 +19,10 @@ if [ "$DEBUG" = "true" ]; then
   echo "--------------- 8< /etc/nginx/conf.d/nginx.conf >8 ---------------"
 fi
 
-/usr/sbin/nginx -g "daemon off;"
+if [ -z "$1" ]; then
+    echo '/usr/sbin/nginx -g "daemon off;"'
+    /usr/sbin/nginx -g "daemon off;"
+else
+    echo "/usr/sbin/nginx $@"
+    /usr/sbin/nginx "$@"
+fi

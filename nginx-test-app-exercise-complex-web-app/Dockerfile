@@ -1,11 +1,9 @@
-# Use nginx version 1.10
+FROM nginx:1.10
 
-# Remove existing nginx conf (/etc/nginx/conf.d/default.conf)
+RUN rm /etc/nginx/conf.d/default.conf
 
-# Copy nginx template to config folder
+COPY conf/nginx.conf.tpl /etc/nginx/conf.d/nginx.conf.tpl
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod a+x /entrypoint.sh
 
-# Copy entrypoint script to root directory
-
-# Make entrypoint script executable
-
-# Always start with the entrypoint script
+ENTRYPOINT ["/entrypoint.sh"]
